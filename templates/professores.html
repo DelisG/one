@@ -1,0 +1,12 @@
+{% extends 'default.html' %}
+{% block content %}
+    <h1>Professores</h1>
+    <ul>
+        {% for professor in professores %}
+            <li>{{ professor.nome }} - {{ professor.cpf }}</li>
+        {% empty %}
+            <li>Nenhum professor cadastrado.</li>
+        {% endfor %}
+    </ul>
+    <p><a href="{% url 'listalunos' %}">Ver alunos</a></p>
+{% endblock %}

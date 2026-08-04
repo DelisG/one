@@ -1,0 +1,20 @@
+{% extends 'default.html' %}
+{% block content %}
+    <h1>Alunos</h1>
+    <ul>
+        {% for aluno in alunos %}
+            <li>{{ aluno.nome }} - {{ aluno.idade }} - {{ aluno.email }}</li>
+        {% empty %}
+            <li>Nenhum aluno cadastrado.</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Professores</h1>
+    <ul>
+        {% for professor in professores %}
+            <li>{{ professor.nome }} - {{ professor.cpf }}</li>
+        {% empty %}
+            <li>Nenhum professor cadastrado.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
